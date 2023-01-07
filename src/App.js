@@ -17,6 +17,8 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Settings from "./pages/settings/Settings";
 import PlayGames from "./pages/playGames/PlayGames";
+import Stories from "./pages/stories/Stories";
+import Meals from "./pages/meals/Meals";
 
 
 
@@ -63,6 +65,14 @@ function App() {
 
         <Route path="/playgames">
            <PlayGames />
+        </Route>
+
+        <Route path="/stories">
+           <Stories />
+        </Route>
+
+        <Route path="/meals">
+           <Meals />
         </Route>
 
         <Route path="/register">
