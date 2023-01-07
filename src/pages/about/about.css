@@ -1,0 +1,38 @@
+.about {
+    margin: 60px;
+
+}
+
+
+
+.aboutTitles{
+    text-align: center;
+    font-family:"Pacifico",serif ;
+    font-size: 36px;
+    margin: 10px;
+    color: purple;
+
+}
+
+
+
+
+.aboutInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #666;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 50px;
+}
+
+
+
+.aboutInfoDesc:first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}

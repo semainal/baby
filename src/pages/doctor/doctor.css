@@ -1,0 +1,100 @@
+.doctorTable {
+    position: relative;
+    border: 1px solid purple;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 12px;
+  
+}
+
+.hepatitB{
+    background-color: rgb(173, 240, 173);
+}
+
+.BCG {
+    background-color: lightpink;
+}
+
+.DaBT {
+    background-color: lightskyblue;
+}
+
+.KPA {
+    background-color: rgb(245, 245, 147);
+}
+
+.KKK {
+    background-color: plum;
+}
+
+.IPA {
+    background-color: rgb(203, 245, 140);
+}
+
+.OPA {
+    background-color: aquamarine;
+}
+
+.Td {
+    background-color: rgb(245, 243, 113);
+}
+
+.HepatitA {
+    background-color: palevioletred;
+}
+
+.Sucicegi {
+    background-color: lightsalmon;
+}
+
+.desc {
+    border: 1px solid purple;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+
+.appointmentBox{
+    border: 5px solid purple;
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin-left: 1100px;
+    margin-top: -450px;
+    margin-bottom:100px;
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+    font-family:"Fredoka One", sans-serif ;
+    
+}
+
+.doctorTable tr th {
+    border: 1px solid purple;
+}
+
+.doctorSubmit {
+    margin-top: 30px;
+    color: white;
+    background-color: purple;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.doctorTitle {
+    text-align: center;
+    font-family:"Pacifico",serif ;
+    font-size: 70px;
+    color: purple;
+
+}
+
+.last {
+    margin-bottom: 30px;
+    
+}

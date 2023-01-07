@@ -1,0 +1,12 @@
+.home{
+    display: flex;
+    
+}
+
+.homeTitle{
+    text-align: center;
+    font-family:"Pacifico",serif ;
+    font-size: 36px;
+    margin: 10px;
+    color: purple;
+}
