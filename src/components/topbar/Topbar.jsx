@@ -1,8 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom"
+import { Context } from "../../context/Context";
 import "./topbar.css"
 
 export default function Topbar() {
-  const user = false;
+  const {user, dispatch }= useContext(Context);
+  const PF = "http://localhost:5000/images/"
+
+  const handleLogout = () => {
+    dispatch({type: "LOGOUT"})
+  }
+
   return (
     
 
@@ -32,7 +40,7 @@ export default function Topbar() {
             <li className="topListItem">
             <Link className="link" to="/write" >WRITE</Link>
             </li>
-            <li className="topListItem"  >
+            <li className="topListItem" onClick={handleLogout} >
             {user && "LOGOUT"}
             </li>
            
@@ -41,28 +49,27 @@ export default function Topbar() {
       <div className="topRight">
         
         
-       
-      <Link className="link" to="/settings" >
-      <img className="topImg" 
-          src="https://cdn.pixabay.com/photo/2013/02/21/19/10/mother-84628_960_720.jpg"
+      {
+          user ? (
+            <Link to="/settings">
+            <img className="topImg" 
+          src={PF + user.profilePic}
           alt="" />
-      </Link>
-            
-     
+            </Link>
           
-        
+          ) : (
             <ul className="topList">
               <li className="topListItem">
-              <Link className="link" to="/login" >LOGIN</Link>
+                <Link className="link" to="/login">LOGIN</Link>
               </li>
             
               <li className="topListItem">
-              <Link className="link" to="/register" >REGISTER</Link>
+                <Link className="link" to="/register">REGISTER</Link>
               </li>
             </ul>
-        
+          )
 
-        
+        }
         
         <i className="topSearchIcon fa-solid fa-magnifying-glass">
         

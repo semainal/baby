@@ -19,6 +19,9 @@ import Settings from "./pages/settings/Settings";
 import PlayGames from "./pages/playGames/PlayGames";
 import Stories from "./pages/stories/Stories";
 import Meals from "./pages/meals/Meals";
+import { useContext } from "react";
+import { Context } from "./context/Context";
+import Diaries from "./pages/diaries/Diaries";
 
 
 
@@ -27,7 +30,7 @@ import Meals from "./pages/meals/Meals";
 
 
 function App() {
-
+  const {user }= useContext(Context);
  
   return (
     <div className="App">
@@ -40,7 +43,7 @@ function App() {
 
         <Switch>
         <Route exact path="/">
-          <Home />
+        <Home/>
         </Route>
 
         <Route path="/about">
@@ -56,11 +59,15 @@ function App() {
         </Route>
 
         <Route path="/write">
-        <Write/> 
+        {user ? <Write/> : <Register />}
         </Route>
 
         <Route path="/doctor">
-          <Doctor />
+        {user ? <Doctor/> : <Register />}
+        </Route>
+
+        <Route path="/diaries">
+        {user ? <Diaries/> : <Register />}
         </Route>
 
         <Route path="/playgames">
@@ -76,15 +83,15 @@ function App() {
         </Route>
 
         <Route path="/register">
-          <Register/>
+        {user ? <Home/> : <Register />}
         </Route>
 
         <Route path="/login">
-           <Login />
+        {user ? <Home/> : <Login />}
         </Route>
 
         <Route path="/settings">
-           <Settings />
+        {user ? <Settings/> : <Register />}
         </Route>
 
     
