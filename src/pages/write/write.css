@@ -66,8 +66,8 @@
 
 .writeSubmit {
     position: absolute;
-    top: -50px;
-    right: 150px;
+    top:60px;
+    right: 350px;
     color: white;
     background-color: purple;
     padding: 10px;

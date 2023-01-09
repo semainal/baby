@@ -21,7 +21,8 @@ import Stories from "./pages/stories/Stories";
 import Meals from "./pages/meals/Meals";
 import { useContext } from "react";
 import { Context } from "./context/Context";
-import Diaries from "./pages/diaries/Diaries";
+
+
 
 
 
@@ -31,9 +32,10 @@ import Diaries from "./pages/diaries/Diaries";
 
 function App() {
   const {user }= useContext(Context);
+  
  
   return (
-    <div className="App">
+    
        
       
       
@@ -42,7 +44,7 @@ function App() {
 
 
         <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
         <Home/>
         </Route>
 
@@ -54,7 +56,7 @@ function App() {
           <Contact />
         </Route>
 
-        <Route path="/post/:postId">
+        <Route path="/post/:post_id">
           <Single />
         </Route>
 
@@ -66,9 +68,7 @@ function App() {
         {user ? <Doctor/> : <Register />}
         </Route>
 
-        <Route path="/diaries">
-        {user ? <Diaries/> : <Register />}
-        </Route>
+     
 
         <Route path="/playgames">
            <PlayGames />
@@ -102,7 +102,7 @@ function App() {
       </Router>
 
       
-    </div>
+
   );
 }
 

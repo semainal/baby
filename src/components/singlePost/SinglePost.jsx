@@ -1,9 +1,11 @@
-import "./singlePost.css"
+
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom"
 import { Context } from "../../context/Context";
 
+
+import "./singlePost.css"
 
 export default function SinglePost() {
     const location = useLocation()
@@ -52,21 +54,17 @@ export default function SinglePost() {
 
     }
 
-
     return (
-        
         <div className="singlePost">
 
             <div className="singlePostWrapper">
-        
-            {post.photo && (
+                {post.photo && (
                     <img src={PF + post.photo}
                         alt=""
                         className="singlePostImg" />
                 )}
-        
 
-        {updateMode ? <input type="text" value={title} className="singlePostTitleInput" autoFocus onChange={(e) => setTitle(e.target.value)} /> :
+                {updateMode ? <input type="text" value={title} className="singlePostTitleInput" autoFocus onChange={(e) => setTitle(e.target.value)} /> :
                     (
                         <h1 className="singlePostTitle">
                             {title}
@@ -82,11 +80,9 @@ export default function SinglePost() {
 
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">Author:
-                       
-                    <Link to={`/?user=${post.userId}`} className="link">
+                        <Link to={`/?user=${post.username}`} className="link">
                             <b>{post.username}</b>
                         </Link>
-                      
                     </span>
                     <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
                     
@@ -97,12 +93,10 @@ export default function SinglePost() {
                     <button className="singlePostButton" onClick={handleUpdate}>
                         Update</button>
                 )}
-                
 
 
             </div>
 
         </div>
-  
     )
 }

@@ -25,10 +25,6 @@ export default function Header() {
             </li>
 
             <li className="headerListItem"  >
-            <Link className="link" to="/diaries" >DIARIES</Link>
-            </li>
-
-            <li className="headerListItem"  >
             <Link className="link" to="/meals" >MEALS</Link>
             </li>
            

@@ -1,5 +1,5 @@
 import "./write.css"
-
+import Header from "../../components/header/Header"
 import { useContext, useState } from "react"
 import axios from "axios";
 import {Context} from "../../context/Context";
@@ -39,6 +39,8 @@ export default function Write() {
     };
 
   return (
+    <>
+    <Header/>
     <div className="write">
         {file && (<img className="writeImg"
         src={URL.createObjectURL(file)}
@@ -65,5 +67,6 @@ export default function Write() {
 
       
         </div>
+        </>
   )
 }
