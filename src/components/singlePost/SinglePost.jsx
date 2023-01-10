@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom"
@@ -91,7 +90,7 @@ export default function SinglePost() {
                     (<p className="singlePostDesc"> {desc} </p>)}
                 {updateMode && (
                     <button className="singlePostButton" onClick={handleUpdate}>
-                        Update</button>
+                        Send</button>
                 )}
 
 

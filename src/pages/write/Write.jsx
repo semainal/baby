@@ -60,7 +60,7 @@ export default function Write() {
             </div>
 
             <button className="writeSubmit" type="submit">
-                Publish
+                Save
             </button>
             
         </form>

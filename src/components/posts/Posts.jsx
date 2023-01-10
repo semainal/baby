@@ -8,6 +8,8 @@ export default function Posts({posts}) {
          <Post post={p}/>
       ))}
 
+      
+
        
         
 
